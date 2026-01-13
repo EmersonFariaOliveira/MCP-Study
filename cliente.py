@@ -1,8 +1,7 @@
 import asyncio
-from pathlib import Path
 from fastmcp import Client
 
-caminho_servidor = Path(__file__).parent / "server.py"
+caminho_servidor = 'http://localhost:8000/sse'
 cliente = Client(caminho_servidor)
 
 async def testar_servidor(cliente, nome_usuario, id_usuario):
@@ -15,6 +14,6 @@ async def testar_servidor(cliente, nome_usuario, id_usuario):
 if __name__ == "__main__":
     asyncio.run(testar_servidor(
         cliente=cliente,
-        nome_usuario="Emerson",
-        id_usuario="4")
+        nome_usuario="Emerson Faria",
+        id_usuario=5)
     )

@@ -7,4 +7,4 @@ async def dar_bom_dia(nome_usuario: str, id_usuario: int) -> str:
     return f'Olá, {nome_usuario}! (ID {id_usuario})'
 
 if __name__ == '__main__':
-    servidor_mcp.run(transport="stdio")
+    servidor_mcp.run(transport="sse")
